@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import SinglePhoto from './SinglePhoto';
 
 const Photos = () => {
-    return(
+    return (
         <div>
-            <SinglePhoto/>
+            <SinglePhoto />
         </div>
     )
 }
