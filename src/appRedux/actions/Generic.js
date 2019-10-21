@@ -1,4 +1,4 @@
-import { GET_GENERIC, GET_GENERIC_SINGLE } from "../../constants/ActionTypes";
+import { GET_GENERIC } from "../../constants/ActionTypes";
 
 export const getGeneric = (type) => {
   return {
@@ -7,9 +7,3 @@ export const getGeneric = (type) => {
   };
 };
 
-export const getGenericSingle = (payload) => {
-  return {
-    type: GET_GENERIC,
-    payload: payload
-  };
-};

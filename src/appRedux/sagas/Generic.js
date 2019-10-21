@@ -1,17 +1,17 @@
 import { all, call, fork, put, takeEvery } from "redux-saga/effects";
 import { GET_GENERIC, GET_GENERIC_SUCCESS, GET_GENERIC_SINGLE } from '../../constants/ActionTypes';
 import axios from 'axios'
-// import config from "./config";
+import config from "./config";
 
 const genericGetApi = async (type) => {
-    return await axios.get(/*config.url +*/ type)
+    return await axios.get(config.url + type)
         .then((response) => {
             return response.data;
         });
 }
 
 const genericGetSingleApi = async (type,id) => {
-    return await axios.get(/*config.url +*/ type ,  { params: { id: id } })
+    return await axios.get(config.url + type ,  { params: { id: id } })
         .then((response) => {
             return response.data;
         });
