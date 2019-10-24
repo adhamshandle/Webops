@@ -10,8 +10,8 @@ const genericGetApi = async (type) => {
         });
 }
 
-const genericGetSingleApi = async (type,id) => {
-    return await axios.get(config.url + type ,  { params: { id: id } })
+const genericGetSingleApi = async (type, id) => {
+    return await axios.get(config.url + type, { params: { id: id } })
         .then((response) => {
             return response.data;
         });

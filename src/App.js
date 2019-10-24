@@ -8,11 +8,11 @@ export const store = configureStore().store;
 class App extends Component {
   render() {
     return (
-         <Provider store={store}>
+      <Provider store={store}>
         <Router history={history}>
           <Route exact path="/" component={Photos} />
         </Router>
-        </Provider>
+      </Provider>
     );
   }
 }
