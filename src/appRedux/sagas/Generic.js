@@ -1,4 +1,4 @@
-import { all, call, fork, put, takeEvery } from "redux-saga/effects";
+import { all, call, put, takeEvery } from "redux-saga/effects";
 import { GET_GENERIC, GET_GENERIC_SUCCESS, GET_GENERIC_SINGLE } from '../../constants/ActionTypes';
 import axios from 'axios'
 import config from "./config";
