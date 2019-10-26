@@ -2,13 +2,10 @@ import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import get from 'lodash/get';
 import { connect } from 'react-redux';
-import { library } from '@fortawesome/fontawesome-svg-core';
 import { getGeneric } from "../../appRedux/actions/Generic";
-// import '../../../node_modules/font-awesome/css/font-awesome.min.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faTwitter } from "@fortawesome/free-brands-svg-icons"
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons"
-// library.add(fa, faKey);
 
 const WeddingBreadcrumb = styled.div`
 width: 92%;
@@ -88,7 +85,6 @@ const PhotoView = (props) => {
     return (
         <React.Fragment>
             <WeddingBreadcrumb>
-                {console.log(get(props, 'history.location.state.categories[0]'))}
                 <WeddingBreadcrumbLink><BreadcrubmLink href={"/"}>GALLERY</BreadcrubmLink>{get(props, 'history.location.state.categories[0].id') ? <FontAwesomeIcon icon={faAngleRight} /> : ("")} <BreadcrubmLink href={`/categories/${get(props, 'history.location.state.categories[0].id')}`}>{get(props, 'history.location.state.categories[0].title', '')}</BreadcrubmLink> <FontAwesomeIcon icon={faAngleRight} /> {get(props, 'location.state.photo.title', '')} </WeddingBreadcrumbLink>
             </WeddingBreadcrumb>
             <PhotoWrapper>
