@@ -4,6 +4,7 @@ import Photos from './components/Photos/Photos';
 import history from './history';
 import { Provider } from "react-redux";
 import configureStore from "./appRedux/store";
+import PhotoView from './components/Photos/PhotoView';
 export const store = configureStore().store;
 class App extends Component {
   render() {
@@ -11,6 +12,9 @@ class App extends Component {
       <Provider store={store}>
         <Router history={history}>
           <Route exact path="/" component={Photos} />
+          <Route exact path="/photos/:id" component={PhotoView} />
+          <Route exact path="/categories/photos/:id" component={PhotoView} />
+          <Route exact path="/categories/:id" component={Photos} />
         </Router>
       </Provider>
     );
