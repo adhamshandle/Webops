@@ -43,7 +43,10 @@ const Photos = (props) => {
                     <WeddingBreadcrumbLink><BreadcrubmLink href="/">GALLERY</BreadcrubmLink> > {get(props, 'main.categories[0].title', '')}</WeddingBreadcrumbLink>
                 </WeddingBreadcrumb>
                 : ("")}
-            <SinglePhoto history={props.history} categories={get(props, 'main.categories')} photos={get(props, 'main.photos', [])} />
+            {get(props, 'main.categories', []).length <= 0 && get(props, 'history.location.pathname').includes("categories") ?
+                <p style={{ textAlign: 'center' }}>NO PHOTOS FOUND!</p> :
+                <SinglePhoto history={props.history} categories={get(props, 'main.categories')} photos={get(props, 'main.photos', [])} />
+            }
         </div>
     )
 }
